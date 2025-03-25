@@ -8,18 +8,21 @@
     <Spinner
         android:id="@+id/scenario_spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"/>
 
     <Spinner
         android:id="@+id/los_nlos_spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"/>
 
     <Spinner
         android:id="@+id/inf_nlos_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:paddingBottom="10dp"/>
 
     <EditText
         android:id="@+id/d2D_input"
@@ -27,7 +30,8 @@
         android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:paddingBottom="10dp"/>
 
     <EditText
         android:id="@+id/hBS_input"
@@ -35,7 +39,8 @@
         android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:paddingBottom="10dp"/>
 
     <EditText
         android:id="@+id/hUT_input"
@@ -43,7 +48,8 @@
         android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:paddingBottom="10dp"/>
 
     <EditText
         android:id="@+id/hE_input"
@@ -51,7 +57,8 @@
         android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:paddingBottom="10dp"/>
 
     <EditText
         android:id="@+id/freq_input"
@@ -59,7 +66,8 @@
         android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:paddingBottom="10dp"/>
 
     <EditText
         android:id="@+id/w_input"
@@ -67,7 +75,8 @@
         android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:paddingBottom="10dp"/>
 
     <EditText
         android:id="@+id/h_input"
@@ -75,14 +84,16 @@
         android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:paddingBottom="10dp"/>
 
     <Button
         android:id="@+id/calculate_button"
         android:text="Oblicz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:paddingBottom="10dp"/>
 
     <TextView
         android:id="@+id/result_text"
