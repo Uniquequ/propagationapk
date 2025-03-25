@@ -120,6 +120,12 @@ public class PropagationLossCalculator {
         double result;
         if (hBS < 10 || hBS > 150){
             return "Wysokość hBs poza zakresem!";
+        } else if (d2D < 10 || d2D > 10000) {
+            return "Odległość d2D poza zakresem";
+        } else if (hUT < 1 || hUT > 10) {
+            return "Wysokość hUT poza zakresem";
+        } else if (h < 5 || h > 50) {
+            return "Wysokość budynków h poza zakresem";
         } else {
             if (choice == 1) {
                 if (d2D >= 10 && d2D <= dBP) {
@@ -130,7 +136,9 @@ public class PropagationLossCalculator {
                     return "Odległość d2D poza zakresem!";
                 }
             } else if (choice == 2) {
-                if (d2D >= 10 && d2D <= 5000) {
+                if (W < 5 || W > 50){
+                    return "Szerokość ulic W poza zakresem";
+                } else if (d2D >= 10 && d2D <= 5000) {
                     result = Math.max(Math.max(calculateRMaLoS1(d3D), calculateRMaLoS2(d3D, dBP)), calculateRMaNLoS(d3D));
                 } else {
                     return "Odległość d2D poza zakresem!";
@@ -147,20 +155,24 @@ public class PropagationLossCalculator {
         double dBP_prim = calculateDBPPrim();
         double result;
 
-        if (choice == 1) {
-            if (d2D >= 10 && d2D <= dBP_prim) {
-                result = calculateUMaLoS1(d3D);
-            } else if (d2D > dBP_prim && d2D <= 5000) {
-                result = calculateUMaLoS2(d3D, dBP_prim);
-            } else {
-                return "Odległość d2D poza zakresem!";
-            }
-        } else if (choice == 2) {
-            result = Math.max(Math.max(calculateUMaLoS1(d3D), calculateUMaLoS2(d3D, dBP_prim)), calculateUMaNLoS(d3D));
+        if (hUT < 1.5 || hUT > 22.5) {
+            return "Wysokość hUT poza zakresem";
         } else {
-            return "Nieprawidłowy wybór!";
+            if (choice == 1) {
+                if (d2D >= 10 && d2D <= dBP_prim) {
+                    result = calculateUMaLoS1(d3D);
+                } else if (d2D > dBP_prim && d2D <= 5000) {
+                    result = calculateUMaLoS2(d3D, dBP_prim);
+                } else {
+                    return "Odległość d2D poza zakresem!";
+                }
+            } else if (choice == 2) {
+                result = Math.max(Math.max(calculateUMaLoS1(d3D), calculateUMaLoS2(d3D, dBP_prim)), calculateUMaNLoS(d3D));
+            } else {
+                return "Nieprawidłowy wybór!";
+            }
+            return "Tłumienie wynosi: " + String.format("%.2f", result) + " dB";
         }
-        return "Tłumienie wynosi: " + String.format("%.2f", result) + " dB";
     }
 
     public String calculateUMi(int choice) {
@@ -168,20 +180,24 @@ public class PropagationLossCalculator {
         double dBP_prim = calculateDBPPrim();
         double result;
 
-        if (choice == 1) {
-            if (d2D >= 10 && d2D <= dBP_prim) {
-                result = calculateUMiLoS1(d3D);
-            } else if (d2D > dBP_prim && d2D <= 5000) {
-                result = calculateUMiLoS2(d3D, dBP_prim);
-            } else {
-                return "Odległość d2D poza zakresem!";
-            }
-        } else if (choice == 2) {
-            result = Math.max(Math.max(calculateUMiLoS1(d3D), calculateUMiLoS2(d3D, dBP_prim)), calculateUMiNLoS(d3D));
+        if(hUT < 1.5 || hUT > 22.5) {
+            return "Wysokość hUT poza zakresem";
         } else {
-            return "Nieprawidłowy wybór!";
+            if (choice == 1) {
+                if (d2D >= 10 && d2D <= dBP_prim) {
+                    result = calculateUMiLoS1(d3D);
+                } else if (d2D > dBP_prim && d2D <= 5000) {
+                    result = calculateUMiLoS2(d3D, dBP_prim);
+                } else {
+                    return "Odległość d2D poza zakresem!";
+                }
+            } else if (choice == 2) {
+                result = Math.max(Math.max(calculateUMiLoS1(d3D), calculateUMiLoS2(d3D, dBP_prim)), calculateUMiNLoS(d3D));
+            } else {
+                return "Nieprawidłowy wybór!";
+            }
+            return "Tłumienie wynosi: " + String.format("%.2f", result) + " dB";
         }
-        return "Tłumienie wynosi: " + String.format("%.2f", result) + " dB";
     }
 
     public String calculateInH(int choice) {
