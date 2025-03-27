@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+
+    private TextView d2DText, hBSText, hUTText, hEText, freqText, wText, hText;
     private EditText d2DInput, hBSInput, hUTInput, hEInput, freqInput, wInput, hInput;
     private Spinner scenarioSpinner, losNlosSpinner, infNlosSpinner;
 
@@ -19,12 +21,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Inicjalizacja pól
+        d2DText = findViewById(R.id.d2D_text);
         d2DInput = findViewById(R.id.d2D_input);
+        hBSText = findViewById(R.id.hBS_text);
         hBSInput = findViewById(R.id.hBS_input);
+        hUTText = findViewById(R.id.hUT_text);
         hUTInput = findViewById(R.id.hUT_input);
+        hEText = findViewById(R.id.hE_text);
         hEInput = findViewById(R.id.hE_input);
+        freqText = findViewById(R.id.freq_text);
         freqInput = findViewById(R.id.freq_input);
+        wText = findViewById(R.id.w_text);
         wInput = findViewById(R.id.w_input);
+        hText = findViewById(R.id.h_text);
         hInput = findViewById(R.id.h_input);
 
         scenarioSpinner = findViewById(R.id.scenario_spinner);
@@ -145,12 +154,19 @@ public class MainActivity extends AppCompatActivity {
 
     // Metoda do ukrywania wszystkich pól
     private void hideAllFields() {
+        d2DText.setVisibility(View.GONE);
         d2DInput.setVisibility(View.GONE);
+        hBSText.setVisibility(View.GONE);
         hBSInput.setVisibility(View.GONE);
+        hUTText.setVisibility(View.GONE);
         hUTInput.setVisibility(View.GONE);
+        hEText.setVisibility(View.GONE);
         hEInput.setVisibility(View.GONE);
+        freqText.setVisibility(View.GONE);
         freqInput.setVisibility(View.GONE);
+        wText.setVisibility(View.GONE);
         wInput.setVisibility(View.GONE);
+        hText.setVisibility(View.GONE);
         hInput.setVisibility(View.GONE);
     }
 
@@ -160,24 +176,31 @@ public class MainActivity extends AppCompatActivity {
         String scenario = scenarioSpinner.getSelectedItem().toString();
         int losNlosChoice = losNlosSpinner.getSelectedItem().toString().equals("LoS") ? 1 : 2;
 
-
+        d2DText.setVisibility(View.VISIBLE);
         d2DInput.setVisibility(View.VISIBLE);
+        hBSText.setVisibility(View.VISIBLE);
         hBSInput.setVisibility(View.VISIBLE);
+        hUTText.setVisibility(View.VISIBLE);
         hUTInput.setVisibility(View.VISIBLE);
+        freqText.setVisibility(View.VISIBLE);
         freqInput.setVisibility(View.VISIBLE);
 
 
         switch (scenario) {
             case "RMa":
+                hText.setVisibility(View.VISIBLE);
                 hInput.setVisibility(View.VISIBLE);
                 if (losNlosChoice == 2){
+                    wText.setVisibility(View.VISIBLE);
                     wInput.setVisibility(View.VISIBLE);
                 }
                 break;
             case "UMa":
+                hEText.setVisibility(View.VISIBLE);
                 hEInput.setVisibility(View.VISIBLE);
                 break;
             case "UMi":
+                hEText.setVisibility(View.VISIBLE);
                 hEInput.setVisibility(View.VISIBLE);
                 break;
         }

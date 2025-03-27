@@ -119,13 +119,13 @@ public class PropagationLossCalculator {
         double dBP = calculateDBP();
         double result;
         if (hBS < 10 || hBS > 150){
-            return "Wysokość hBs poza zakresem!";
+            return "Wysokość hBs poza zakresem [10, 150]";
         } else if (d2D < 10 || d2D > 10000) {
-            return "Odległość d2D poza zakresem";
+            return "Odległość d2D poza zakresem [10, 10000]";
         } else if (hUT < 1 || hUT > 10) {
-            return "Wysokość hUT poza zakresem";
+            return "Wysokość hUT poza zakresem [1, 10]";
         } else if (h < 5 || h > 50) {
-            return "Wysokość budynków h poza zakresem";
+            return "Wysokość budynków h poza zakresem [5, 50]";
         } else {
             if (choice == 1) {
                 if (d2D >= 10 && d2D <= dBP) {
@@ -137,7 +137,7 @@ public class PropagationLossCalculator {
                 }
             } else if (choice == 2) {
                 if (W < 5 || W > 50){
-                    return "Szerokość ulic W poza zakresem";
+                    return "Szerokość ulic W poza zakresem [5, 50]";
                 } else if (d2D >= 10 && d2D <= 5000) {
                     result = Math.max(Math.max(calculateRMaLoS1(d3D), calculateRMaLoS2(d3D, dBP)), calculateRMaNLoS(d3D));
                 } else {
@@ -156,7 +156,7 @@ public class PropagationLossCalculator {
         double result;
 
         if (hUT < 1.5 || hUT > 22.5) {
-            return "Wysokość hUT poza zakresem";
+            return "Wysokość hUT poza zakresem [1.5, 22.5]";
         } else {
             if (choice == 1) {
                 if (d2D >= 10 && d2D <= dBP_prim) {
@@ -164,7 +164,7 @@ public class PropagationLossCalculator {
                 } else if (d2D > dBP_prim && d2D <= 5000) {
                     result = calculateUMaLoS2(d3D, dBP_prim);
                 } else {
-                    return "Odległość d2D poza zakresem!";
+                    return "Odległość d2D poza zakresem [10, 5000]";
                 }
             } else if (choice == 2) {
                 result = Math.max(Math.max(calculateUMaLoS1(d3D), calculateUMaLoS2(d3D, dBP_prim)), calculateUMaNLoS(d3D));
@@ -181,7 +181,7 @@ public class PropagationLossCalculator {
         double result;
 
         if(hUT < 1.5 || hUT > 22.5) {
-            return "Wysokość hUT poza zakresem";
+            return "Wysokość hUT poza zakresem [1.5, 22.5]";
         } else {
             if (choice == 1) {
                 if (d2D >= 10 && d2D <= dBP_prim) {
@@ -189,7 +189,7 @@ public class PropagationLossCalculator {
                 } else if (d2D > dBP_prim && d2D <= 5000) {
                     result = calculateUMiLoS2(d3D, dBP_prim);
                 } else {
-                    return "Odległość d2D poza zakresem!";
+                    return "Odległość d2D poza zakresem [10, 5000]";
                 }
             } else if (choice == 2) {
                 result = Math.max(Math.max(calculateUMiLoS1(d3D), calculateUMiLoS2(d3D, dBP_prim)), calculateUMiNLoS(d3D));

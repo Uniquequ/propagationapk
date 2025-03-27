@@ -24,68 +24,110 @@
         android:visibility="gone"
         android:paddingBottom="10dp"/>
 
-    <EditText
-        android:id="@+id/d2D_input"
-        android:hint="d2D (m)"
-        android:inputType="numberDecimal"
+    <TextView
+        android:id="@+id/d2D_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:paddingBottom="10dp"/>
+        android:text="Podaj odległość między stacjami" />
+
+    <EditText
+        android:id="@+id/d2D_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="d2D (m)"
+        android:inputType="numberDecimal"
+        android:paddingBottom="10dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/hBS_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Podaj wysokość zawieszenia anteny nadawczej" />
 
     <EditText
         android:id="@+id/hBS_input"
-        android:hint="hBS (m)"
-        android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:paddingBottom="10dp"/>
+        android:hint="hBS (m)"
+        android:inputType="numberDecimal"
+        android:paddingBottom="10dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/hUT_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Podaj wysokość zawieszenia terminala użytkownika" />
 
     <EditText
         android:id="@+id/hUT_input"
-        android:hint="hUT (m)"
-        android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:paddingBottom="10dp"/>
+        android:hint="hUT (m)"
+        android:inputType="numberDecimal"
+        android:paddingBottom="10dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/hE_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Podaj efektywną wysokość środowiska" />
 
     <EditText
         android:id="@+id/hE_input"
-        android:hint="hE (m)"
-        android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:paddingBottom="10dp"/>
+        android:hint="hE (m)"
+        android:inputType="numberDecimal"
+        android:paddingBottom="10dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/freq_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Podaj częstotliwość" />
 
     <EditText
         android:id="@+id/freq_input"
-        android:hint="Częstotliwość (GHz)"
-        android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:paddingBottom="10dp"/>
+        android:hint="Częstotliwość (GHz)"
+        android:inputType="numberDecimal"
+        android:paddingBottom="10dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/w_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Podaj średnią szerokość ulic w środowisku" />
 
     <EditText
         android:id="@+id/w_input"
-        android:hint="Szerokość ulicy (m)"
-        android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:paddingBottom="10dp"/>
+        android:hint="Szerokość ulicy (m)"
+        android:inputType="numberDecimal"
+        android:paddingBottom="10dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/h_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Podaj średnią wysokość budynków w środowisku" />
 
     <EditText
         android:id="@+id/h_input"
-        android:hint="Wysokość budynków (m)"
-        android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:paddingBottom="10dp"/>
+        android:hint="Wysokość budynków (m)"
+        android:inputType="numberDecimal"
+        android:paddingBottom="10dp"
+        android:visibility="visible" />
 
     <Button
         android:id="@+id/calculate_button"
