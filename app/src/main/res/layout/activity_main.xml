@@ -5,6 +5,16 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <TextView
+        android:id="@+id/calc_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="APK5G kalkulator"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="20dp"/>
+
     <Spinner
         android:id="@+id/scenario_spinner"
         android:layout_width="match_parent"
