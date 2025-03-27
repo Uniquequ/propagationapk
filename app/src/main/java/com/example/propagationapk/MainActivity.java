@@ -189,6 +189,8 @@ public class MainActivity extends AppCompatActivity {
         switch (scenario) {
             case "RMa":
                 hText.setVisibility(View.VISIBLE);
+                hBSInput.setHint("Domyślna wartość to 35");
+                hUTInput.setHint("Domyślna wartość to 1.5");
                 hInput.setVisibility(View.VISIBLE);
                 if (losNlosChoice == 2){
                     wText.setVisibility(View.VISIBLE);
@@ -196,10 +198,14 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case "UMa":
+                hBSInput.setHint("Domyślna wartość to 25");
+                hUTInput.setHint("Podaj wartość [1.5, 22.5]");
                 hEText.setVisibility(View.VISIBLE);
                 hEInput.setVisibility(View.VISIBLE);
                 break;
             case "UMi":
+                hBSInput.setHint("Domyślna wartość to 10");
+                hUTInput.setHint("Podaj wartość [1.5, 22.5]");
                 hEText.setVisibility(View.VISIBLE);
                 hEInput.setVisibility(View.VISIBLE);
                 break;

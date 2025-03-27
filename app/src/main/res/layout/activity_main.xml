@@ -28,14 +28,14 @@
         android:id="@+id/d2D_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Podaj odległość między stacjami" />
+        android:text="Odległość między stacjami [m]" />
 
     <EditText
         android:id="@+id/d2D_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="d2D (m)"
         android:inputType="numberDecimal"
+        android:hint="Odległość"
         android:paddingBottom="10dp"
         android:visibility="visible" />
 
@@ -43,13 +43,12 @@
         android:id="@+id/hBS_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Podaj wysokość zawieszenia anteny nadawczej" />
+        android:text="Wysokość zawieszenia anteny nadawczej [m]" />
 
     <EditText
         android:id="@+id/hBS_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="hBS (m)"
         android:inputType="numberDecimal"
         android:paddingBottom="10dp"
         android:visibility="visible" />
@@ -58,13 +57,12 @@
         android:id="@+id/hUT_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Podaj wysokość zawieszenia terminala użytkownika" />
+        android:text="Wysokość zawieszenia terminala użytkownika [m]" />
 
     <EditText
         android:id="@+id/hUT_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="hUT (m)"
         android:inputType="numberDecimal"
         android:paddingBottom="10dp"
         android:visibility="visible" />
@@ -73,14 +71,14 @@
         android:id="@+id/hE_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Podaj efektywną wysokość środowiska" />
+        android:text="Efektywna wysokość środowiska [m]" />
 
     <EditText
         android:id="@+id/hE_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="hE (m)"
         android:inputType="numberDecimal"
+        android:hint="Domyślna wartość to 5"
         android:paddingBottom="10dp"
         android:visibility="visible" />
 
@@ -88,14 +86,14 @@
         android:id="@+id/freq_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Podaj częstotliwość" />
+        android:text="Częstotliwość [GHz]" />
 
     <EditText
         android:id="@+id/freq_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Częstotliwość (GHz)"
         android:inputType="numberDecimal"
+        android:hint="Częstotliwość"
         android:paddingBottom="10dp"
         android:visibility="visible" />
 
@@ -103,14 +101,14 @@
         android:id="@+id/w_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Podaj średnią szerokość ulic w środowisku" />
+        android:text="Średnia szerokość ulic w środowisku [m]" />
 
     <EditText
         android:id="@+id/w_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Szerokość ulicy (m)"
         android:inputType="numberDecimal"
+        android:hint="Domyślna wartość to 20"
         android:paddingBottom="10dp"
         android:visibility="visible" />
 
@@ -118,14 +116,14 @@
         android:id="@+id/h_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Podaj średnią wysokość budynków w środowisku" />
+        android:text="Średnia wysokość budynków w środowisku [m]" />
 
     <EditText
         android:id="@+id/h_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Wysokość budynków (m)"
         android:inputType="numberDecimal"
+        android:hint="Domyślna wartość to 5"
         android:paddingBottom="10dp"
         android:visibility="visible" />
 
