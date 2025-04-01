@@ -78,7 +78,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 params.bottomToBottom = ConstraintLayout.LayoutParams.PARENT_ID;
                 params.verticalBias = 0.5f; // Wyśrodkowanie pionowe
                 linearLayout.setLayoutParams(params);
-                sampleText.setText("Autorzy aplikacji:\nBartosz Nowak 193631\nOlaf Oleksiak\nAndrzej Czechowski\nFilip Cybulski\nMaciej Demski");
+                sampleText.setText("Autorzy aplikacji:\nBartosz Nowak 193631\nOlaf Oleksiak 193312\nAndrzej Czechowski 193711\nFilip Cybulski 188891\nMaciej Demski 193683");
             }
         });
     }
