@@ -46,7 +46,7 @@
             android:id="@+id/show_text_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pokaż przykładowy tekst"
+            android:text="Jak korzystać"
             android:paddingBottom="10dp"/>
 
         <Button
